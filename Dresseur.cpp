@@ -4,8 +4,12 @@
 
 #include "Dresseur.h"
 
-Dresseur::Dresseur(int age, const string &region) : age(age), region(region) {}
+Dresseur::Dresseur(int age, const string &region) : age(age), region(region) {
+    pointsExp=0;
+}
 
 void Dresseur::dresser(Pokemon &pokemon, const Attaque &attaque) {
+connaissances.push_back(attaque.getNom());
+pointsExp++;
 
 }
